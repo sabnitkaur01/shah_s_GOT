@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dom Travel</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+
+
+<body>
+    <main>
+
+    <section id="imageContainer">
+    	<div id="houseImages" class="transition" style="right:0"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+      </div>
+    </section>
+
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+        </ul>
+    </nav>
+
+    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details (github gist) -->
+</main>  <!--end mainContainer-->
+
+<!-- put our lightbox on the top of the stack -->
+
+<section class="lightbox">
+
+  <span class="close-button">X</span>
+  <video src="video/House-Stark.mp4" class="playVideo"></video>
+  <div class="vid-controls">
+      <img src="images/play.svg" data-button="0"  alt="play">
+      <img src="images/pause.svg"  data-button="1" alt="pause">
+    
+      <img src="images/backward.svg" data-button="2" alt="rewind">
+  </div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>
